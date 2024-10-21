@@ -25,16 +25,21 @@ public class UserController {
         return userService.login(loginRequest);
     }
 
+    @GetMapping()
+    public UserResponse me(@AuthenticationPrincipal User user) {
+        return UserResponse.from(user);
+    }
+
     @PostMapping("/api/v1/auth/register")
     public void register(
             @RequestBody RegisterRequest registerRequest
     ) {
         userService.register(registerRequest);
     }
-
-    @RolesAllowed("ADMIN")
-    @GetMapping("/api/v1/auth/me")
-    public UserResponse me(@AuthenticationPrincipal User user){
-        return UserResponse.from(user);
-    }
+//
+//    @RolesAllowed("ADMIN")
+//    @GetMapping("/api/v1/auth/me")
+//    public UserResponse me(@AuthenticationPrincipal User user){
+//        return UserResponse.from(user);
+//    }
 }

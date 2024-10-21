@@ -6,10 +6,14 @@ server:
   port: 9002
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.1.3:8761/eureka
+#  client:
+#    service-url:
+#      defaultZone: http://192.168.1.3:8761/eureka
 
   instance:
-    ip-address: 192.168.1.3
+#    ip-address: 192.168.1.74
     prefer-ip-address: true
+
+jwt:
+  secret: dlsdkfjefwpefskdlfjweijf12l3k12njk12n31l2kjlkfvlasdknvsofjlqk2j412952u23l4k3s89dfsdlfwnef89132kdjnf
+  expiration: 31536000000
