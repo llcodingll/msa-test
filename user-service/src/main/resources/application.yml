@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+jwt:
+  secret: dlsdkfjefwpefskdlfjweijf12l3k12njk12n31l2kjlkfvlasdknvsofjlqk2j412952u23l4k3s89dfsdlfwnef89132kdjnf
+  expiration: 31536000000
